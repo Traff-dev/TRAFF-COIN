@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Traff
+Comment=Traff P2P Cryptocurrency
+Comment[fr]=Traff, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Traff, eşten eşe kriptografik sanal para birimi
+Exec=traff-qt %u
+Terminal=false
+Type=Application
+Icon=traff128
+MimeType=x-scheme-handler/traff;
+Categories=Office;Finance;

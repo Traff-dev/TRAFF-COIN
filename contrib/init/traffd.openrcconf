@@ -1,0 +1,26 @@
+# /etc/conf.d/traffd: config file for /etc/init.d/traffd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/traff/traff.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/traffd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/traffd.pid"
+
+# Where to write traffd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/traffd"
+
+# User and group to own traffd process
+#BITCOIND_USER="traff"
+#BITCOIND_GROUP="traff"
+
+# Path to traffd executable
+#BITCOIND_BIN="/usr/bin/traffd"
+
+# Nice value to run traffd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""
