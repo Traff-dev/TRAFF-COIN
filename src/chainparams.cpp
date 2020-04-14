@@ -45,12 +45,7 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-	(0, uint256("0x000008f98da9a790d44ff144e24262fe56d9f7ce7000b7c30c84c45da5c895a9"))
-	(2, uint256("0x000002ad7099c49f639bcf82c5d8c390897624326579100511dcfa88ab6684f4"))
-	(246326, uint256("0x000000000dbfa11fcedaefcf34ef84b029903789b20bfb51b95e9d56f84d24d8")) //!!!never not delete!!! rollback chain fix graviex scam !!!never not delete!!!
-	(248318, uint256("000000056d91d8cf163ccfefdef912649d97c66aa37422adedad8b7d0bfd76ce"))  //stable block
-	(259201, uint256("b1ae0e640b4d67202df1e6913eae6cbf272a1a2c255e40b8e0043d99322ebfb5"))
-	(260240, uint256("4a8174d64a4667b7ae97dc62066623a84d0248545ed55035fe73b40593045382")); //fix split chain after pos
+	(0, uint256("0x000008f98da9a790d44ff144e24262fe56d9f7ce7000b7c30c84c45da5c895a9")); 
 	
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
