@@ -45,11 +45,11 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-	(0, uint256("0x001")); 
+	(0, uint256("0000068ddcad30fe35d113440256d2b0eef51d4118c68e277d0f3c6738a7d1c8")); 
 	
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1542152086, // * UNIX timestamp of last checkpoint block
+    1500685200, // * UNIX timestamp of last checkpoint block
     0,    // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     500       // * estimated number of transactions per day after checkpoint
@@ -90,11 +90,11 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 4-byte int at any alignment.
          */
-        pchMessageStart[0] = 0x02;
-        pchMessageStart[1] = 0x2a;
-        pchMessageStart[2] = 0x0c;
-        pchMessageStart[3] = 0xa1;
-        vAlertPubKey = ParseHex("0484d90e17b407221bc32d44832716418f090c323c594749d66adf3ff5c630bad489712738ada058d25a676f3dfa964258db28d3dbb58097f03cc8f2b4d22eb8e5");
+        pchMessageStart[0] = 0x03;
+        pchMessageStart[1] = 0x2f;
+        pchMessageStart[2] = 0x0b;
+        pchMessageStart[3] = 0xa4;
+        vAlertPubKey = ParseHex("049130017bbb1721aa8ec919ce911acf00bd8b5cd574708e8de5c4801045fa97d1b78b43c913a691f54828612714c7591239582ee02f6f9030f94d5f5122e0fb41");
         nDefaultPort = 60021;
         bnProofOfWorkLimit = ~uint256(0) >> 20; // Traff starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 210000;
@@ -102,7 +102,7 @@ public:
         nMinerThreads = 0;
         nTargetTimespan = 1 * 60; // Traff: 1 minute
         nTargetSpacing = 1 * 60;  // Traff: 1 minute
-        nMaturity = 6;
+        nMaturity = 77;
 		nMaxMoneyOut = 10000000000 * COIN;
         /** Height or Time Based Activations **/
         nLastPOWBlock = 259200;
@@ -112,7 +112,7 @@ public:
         nZerocoinStartHeight = 259300; 
         nZerocoinStartTime = 1941884992;  // 11/10/2018 @ 9:23pm (UTC)
 		
-		const char* pszTimestamp = "TRAFF 18-02-2018";
+		const char* pszTimestamp = "GIVE DIME 100 20/04/2020";
 		
         CMutableTransaction txNew;
         txNew.vin.resize(1);
@@ -120,18 +120,18 @@ public:
 				
         txNew.vin[0].scriptSig = CScript() << 486604799 << CScriptNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
         txNew.vout[0].nValue = 0 * COIN;
-        txNew.vout[0].scriptPubKey = CScript() << ParseHex("0484d90e17b407221bc32d44832716418f090c323c594749d66adf3ff5c630bad489712738ada058d25a676f3dfa964258db28d3dbb58097f03cc8f2b4d22eb8e5") << OP_CHECKSIG;
+        txNew.vout[0].scriptPubKey = CScript() << ParseHex("049130017bbb1721aa8ec919ce911acf00bd8b5cd574708e8de5c4801045fa97d1b78b43c913a691f54828612714c7591239582ee02f6f9030f94d5f5122e0fb41") << OP_CHECKSIG;
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1520530811;
+        genesis.nTime = 1500685200;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 20853759;
+        genesis.nNonce = 3258283;
         hashGenesisBlock = genesis.GetHash();
 		
-        assert(hashGenesisBlock == uint256("0x000008f98da9a790d44ff144e24262fe56d9f7ce7000b7c30c84c45da5c895a9"));
-        assert(genesis.hashMerkleRoot == uint256("0xd937e75cb33178449539789d86288a0cf8280a095113c0ef19a3a2f1cdff1c7b"));
+        assert(hashGenesisBlock == uint256("0x0000068ddcad30fe35d113440256d2b0eef51d4118c68e277d0f3c6738a7d1c8"));
+        assert(genesis.hashMerkleRoot == uint256("0x2a568e4e709b33d7148f8e7e3b8c71c8b32c555b4bb2da338db264b28bee8230"));
 	    
 		vSeeds.push_back(CDNSSeedData("traffcoin.traff.co", "traffcoin.traff.co"));
 		
@@ -148,14 +148,14 @@ public:
         fAllowMinDifficultyBlocks = false;
         fDefaultConsistencyChecks = false;
         fRequireStandard = true;
-        fMineBlocksOnDemand = false;
+        fMineBlocksOnDemand = true;
         fSkipProofOfWorkCheck = false;
         fTestnetToBeDeprecatedFieldRPC = false;
         fHeadersFirstSyncingActive = false;
         nPoolMaxTransactions = 3;
-        strSporkKey = "0484d90e17b407221bc32d44832716418f090c323c594749d66adf3ff5c630bad489712738ada058d25a676f3dfa964258db28d3dbb58097f03cc8f2b4d22eb8e5";
+        strSporkKey = "049130017bbb1721aa8ec919ce911acf00bd8b5cd574708e8de5c4801045fa97d1b78b43c913a691f54828612714c7591239582ee02f6f9030f94d5f5122e0fb41";
         
-        strObfuscationPoolDummyAddress = "Sg3aLcSeLqbpEsVgoXtDFrpDYDfAsf1qxv";
+        strObfuscationPoolDummyAddress = "Trg3aLcSeLqbpEsVgoXtDFrpDYDfAsf1qxv";
         nStartMasternodePayments = 1403728576; //Wed, 25 Jun 2014 20:36:16 GMT
 
         /** Zerocoin */
