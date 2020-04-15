@@ -50,7 +50,7 @@ static Checkpoints::MapCheckpoints mapCheckpoints =
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
     1542152086, // * UNIX timestamp of last checkpoint block
-    1,    // * total number of transactions between genesis and last checkpoint
+    0,    // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     0        // * estimated number of transactions per day after checkpoint
 };
@@ -110,7 +110,7 @@ public:
 		
         nBlockEnforceSerialRange = 1; //Enforce serial range starting this block
         nZerocoinStartHeight = 259300; 
-        nZerocoinStartTime = 1541884992;  // 11/10/2018 @ 9:23pm (UTC)
+        nZerocoinStartTime = 1941884992;  // 11/10/2018 @ 9:23pm (UTC)
 		
 		const char* pszTimestamp = "TRAFF 18-02-2018";
 		
