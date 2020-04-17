@@ -1,5 +1,5 @@
 ---
-name: "traff-win-3.0"
+name: "traff-win-1.0"
 enable_cache: true
 suites:
 - "trusty"
@@ -22,8 +22,8 @@ packages:
 - "ca-certificates"
 - "python"
 remotes:
-- "url": "https://github.com/traffcoin/traff.git"
-  "dir": "traff"
+- "url": "https://github.com/Traff-dev/TRAFF-COIN"
+  "dir": "TRAFF-COIN"
 files: []
 script: |
   WRAP_DIR=$HOME/wrapped
