@@ -22,7 +22,7 @@ packages:
 - "ca-certificates"
 - "python"
 remotes:
-- "url": "https://github.com/Traff-dev/TRAFF-COIN"
+- "url": "https://github.com/Traff-dev/TRAFF-COIN.git"
   "dir": "TRAFF-COIN"
 files: []
 script: |
