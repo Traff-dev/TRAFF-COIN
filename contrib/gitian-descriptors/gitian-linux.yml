@@ -29,8 +29,8 @@ packages:
 - "python"
 reference_datetime: "2015-06-01 00:00:00"
 remotes:
-- "url": "https://github.com/traffcoin/traff.git"
-  "dir": "traff"
+- "url": "https://github.com/Traff-dev/TRAFF-COIN"
+  "dir": "TRAFF-COIN"
 files: []
 script: |
 
@@ -115,7 +115,7 @@ script: |
   chmod +x ${WRAP_DIR}/${prog}
   done
 
-  cd traff
+  cd TRAFF-COIN
   BASEPREFIX=`pwd`/depends
   # Build dependencies for each host
   for i in $HOSTS; do
@@ -137,13 +137,13 @@ script: |
   ./autogen.sh
   CONFIG_SITE=${BASEPREFIX}/`echo "${HOSTS}" | awk '{print $1;}'`/share/config.site ./configure --prefix=/
   make dist ${MAKEOPTS}
-  SOURCEDIST=`echo traff-*.tar.gz`
+  SOURCEDIST=`echo TRAFF-COIN-*.tar.gz`
   DISTNAME=`echo ${SOURCEDIST} | sed 's/.tar.*//'`
   # Correct tar file order
   mkdir -p temp
   pushd temp
   tar xf ../$SOURCEDIST
-  find traff-* | sort | tar --no-recursion --mode='u+rw,go+r-w,a+X' --owner=0 --group=0 -c -T - | gzip -9n > ../$SOURCEDIST
+  find TRAFF-COIN-* | sort | tar --no-recursion --mode='u+rw,go+r-w,a+X' --owner=0 --group=0 -c -T - | gzip -9n > ../$SOURCEDIST
   popd
 
   ORIGPATH="$PATH"
